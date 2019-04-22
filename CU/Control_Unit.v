@@ -18,6 +18,7 @@ Clr = 1'b0;
 #11 Clr = 1'b1;
 end
  
+ 
 initial #3000 $finish;
 initial begin
 IR = 32'b00000000001000010000000000100001;
