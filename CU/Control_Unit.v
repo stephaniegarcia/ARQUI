@@ -24,7 +24,7 @@ initial begin
 IR = 32'b00000000001000010000000000100001;
 #60
 IR = 32'b10100000001000010000000000100001;
-#90
+#85
 IR = 32'b00010000001000010000000000100001;
 #55
 IR = clear;
@@ -98,7 +98,7 @@ next_state_address_selector nsas( M,  N, Sts);
 incrementer_register increg( Q,  D, Clk);
   MUX_ROM mxrom( st, state, state1, CR, Q, M, Clr); 
 microStore mcStr(st, data_out);  
-control_register Creg(N, Inv, S, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, opcode, MuxA_Ld, MuxB_Ld, CR, Y, data_out, Clr, Clk);
+control_register Creg(N, Inv, S, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, opcode, MuxA_Ld, MuxB_Ld, CR,Y, data_out, Clr, Clk);
 
 endmodule//////////////////////////////////////////////////////////////////////////////////////////
 
