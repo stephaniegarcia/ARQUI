@@ -231,6 +231,10 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 
   always @(*)
   
+    // N = 3'b 000 Para Instruction encoder => 
+    // N = 3'b 010 Para usar el CR
+    // N = 3'b011 para incrementer
+
     case(Y)
         7'd0:
         begin
