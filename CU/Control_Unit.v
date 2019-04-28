@@ -1483,6 +1483,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
         end
+       //Ale End 
         
        //Steph Begin
         7'd46:
