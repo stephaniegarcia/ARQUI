@@ -376,6 +376,33 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
 
         end
+      7'd5:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
       7'd6:
         begin
           N = 3'b010;//  32
@@ -403,6 +430,1087 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
         end
+      7'd7:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+      7'd8:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd9:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd10:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd11:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd12:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd13:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd14:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd15:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd16:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001010;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd17:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+         7'd18:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd19:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b011100;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd20:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b011100;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd21:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd22:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001100;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd23:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd24:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001101;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd25:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd26:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001110;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd27:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd28:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b001111;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd29:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd30:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd31:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd32:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd33:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd34:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b1;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b000000;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd35:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd36:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b1;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd37:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd38:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b1;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100011;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b01; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd39:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd40:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b1;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd41:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd42:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b1;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100001;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b01; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd43:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b0;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100101;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd44:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b1;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100101;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd45:
+        begin
+          N = 3'b011;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b0;//  23
+          MuxMAR_Ld = 1'b1;//  22
+          RF_Ld = 1'b0;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b1;// 16
+          RW = 1'b1;// 15
+          opcode = 6'b100101;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b00; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        7'd46:
+        begin
+          N = 3'b010;//  32
+          Inv = 1'b0;//  28
+          S = 2'b00;//  27
+          IR_Ld = 1'b0;//  25
+          MAR_Ld = 1'b0;//  24
+          MDR_Ld = 1'b1;//  23
+          MuxMAR_Ld = 1'b0;//  22
+          RF_Ld = 1'b1;// 21
+          MuxC_Ld = 1'b0;// 20
+          PC_Ld = 1'b0;// 19
+          nPC_Ld = 1'b0;// 18
+          MuxMDR_Ld = 1'b1;// 17
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
+          opcode = 6'b100101;// 14
+          MuxA_Ld = 2'b00;// 8
+          MuxB_Ld = 2'b01; // 6
+          Hi_Ld = 1'b0;
+          Lo_Ld = 1'b0;
+          MuxReg_Ld = 2'b00;
+          CR = 6'b000001; //4
+          state = Y;
+
+          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};
+        end
+        
       7'd67:
         begin
           N = 3'b011;//  32
