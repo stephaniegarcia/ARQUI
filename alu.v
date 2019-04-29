@@ -1,4 +1,4 @@
-//
+//steph
 module alu(
            input [31:0] A,B,             
            input [5:0] opcode,
@@ -18,66 +18,132 @@ module alu(
             begin
             {carryFlag, out} = A + B; 
             end
-        6'b000001: // SUB fix overflow!!
+        6'b001000: //ADDI 
+           begin
+            {carryFlag, out} = A + 16'b0000000000000000; 
+            overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
+            end
+        6'b000101: //ADDIU
+           begin
+            {carryFlag, out} = A + 16'b0000000000000000; 
+            end
+        6'b000001: // SUB fixed
             begin
             {carryFlag, out} = A - B;
-            overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
+            overflowFlag = (A[31] == 0 && B[31] == 1 && out[31] == 1) || (A[31] == 1 && B[31] == 0 && out[31] == 0);
             end
         6'b000001: // SUBU
             begin
             {carryFlag, out} = A - B;
-            overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
+            overflowFlag = (A[31] == 0 && B[31] == 1 && out[31] == 1) || (A[31] == 1 && B[31] == 0 && out[31] == 0);
+            end
+        6'b000010: //  SLT 
+            begin
+            if(A < B) 
+            begin
+                out = 1'b1;
+            end
+            else out = 1'b0;
+            end
+        6'b000010: //  SLTU
+            begin
+            if(A < B) 
+            begin
+                out = 1'b1;
+            end
+            else out = 1'b0;
+            end    
+        6'b000010: //  SLTI ??
+            begin
+            if(A <  16'b0000000000000000) 
+            begin
+                out = 1'b1;
+            end
+            else out = 1'b0;
+            end
+        6'b000010: //  SLTIU ??
+            begin
+            if(A <  16'b0000000000000000) 
+            begin
+                out = 1'b1;
+            end
+            else out = 1'b0;
+            end
+        6'b000010: //  CLO ??
+            begin
+            if(A < B) 
+            begin
+                out = 1'b0;
+            end
+            else out = 0;
+            end
+        6'b000010: //  CLZ ??
+            begin
+            if(A < B) 
+            begin
+                out = 1;
+            end
+            else out = 0;
             end
         6'b000010: //  AND 
             begin
             out =  A & B; 
             end
+        6'b000010: //  ANDI ??
+            begin
+            out = A & 16'b0000000000000000;
+            end
         6'b000011: //  OR
             begin
             out =  A | B; 
+            end
+        6'b000011: //  ORI ??
+            begin
+            out = A |  16'b0000000000000000;  
             end
         6'b000100: //  XOR
            begin
             out =  A ^ B;        
             end
+        6'b000100: //  XORI ??
+           begin
+            out = A ^ 16'b0000000000000000;  
+            end
         6'b001001: // NOR
+           begin
+            out = ~(A | B); 
+            end
+        6'b001001: // LUI ??
            begin
             out = ~(A | B); 
             end
         6'b000110: // SLL
            begin
-            out = A << B[31:0]; 
+            out = A << B; 
             end
-        6'b000110: // SLL
+        6'b000110: // SLLV
           begin
-            out = A << B[31:0]; 
+            out = A << B; 
+            end
+        6'b000111: // SRA
+           begin
+            out = A >> B; 
+  
+            end
+        6'b000111: // SRAV
+           begin
+            out = A >> B; 
+  
             end
         6'b000111: // SRL 
            begin
-            out = A >> B[31:0]; 
+            out = A >> B; 
   
             end
-        6'b001000: //ADDI
+        6'b000111: // SRLV
            begin
-            {carryFlag, out} = A + B; 
-            overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
+            out = A >> B; 
             end
-        6'b000101: //ADDIU
-           begin
-            {carryFlag, out} = A + B; 
-            end
-        6'b001010: //ANDI
-           begin
-          out = A & B[15:0];  
-          end
-        6'b001011: //ORI
-           begin
-          out = A | B[15:0];  
-          end
-        6'b001100:  //XORI
-           begin
-          out = A ^ B[15:0];  
-          end
         endcase
     //-----FLAGS------
     negativeFlag = out[31]; //NEGATIVE FLAG
@@ -135,4 +201,4 @@ module tester;
          #3 $display("Opcode: %b, Binary Output: %b, Decimal Output: %d, Zero Flag: %d",opcode,out,out,zeroFlag);
         #10;
     end  
-endmodulez
+endmodule
