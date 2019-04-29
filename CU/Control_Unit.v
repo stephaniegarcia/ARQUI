@@ -92,13 +92,13 @@ wire [6:0] Q; // salida del incremento
 wire[43:0] data_out;
 wire[6:0] st;
 // instancias entre moduluos 
- IR_Encoder enc( state, IR,Clk);   
-  MUX_COND mxcnd( in, MOC,COND, S); 
+IR_Encoder enc( state, IR,Clk);   
+MUX_COND mxcnd( in, MOC,COND, S); 
 inverter inv( Sts, in, Inv);  
 next_state_address_selector nsas( M,  N, Sts); 
-  state_adder stadd( D,  st, 7'd1); 
+state_adder stadd( D, st, 7'd1); 
 incrementer_register increg( Q,  D, Clk);
-  MUX_ROM mxrom( st, state, state1, CR, Q, M, Clr); 
+MUX_ROM mxrom( st, state, state1, CR, Q, M, Clr); 
 microStore mcStr(st, data_out, Y);  
 control_register Creg(N, Inv, S, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, MuxA_Ld, MuxB_Ld, MuxReg_Ld, CR,Y, data_out, Clr, Clk);
 
@@ -106,24 +106,111 @@ endmodule///////////////////////////////////////////////////////////////////////
 
 
 module IR_Encoder(output reg [6:0] state, input [31:0] IR, input Clk);
+
   wire [5:0] func;
   wire [5:0] opcode;
+  wire [4:0] rs;
+  wire [4:0] rt;
+  wire [4:0] rd;
+  wire [4:0] sa;
+  wire [15:0] imm16;
+  wire [25:0] address26;
+
 
   assign func = IR[5:0];
   assign opcode = IR[31:26];
+  assign rs = IR[25:21];
+  assign rt = IR[20:16];
+  assign rd = IR[15:11];
+  assign sa = IR[10:6];
+  assign imm16 = IR[15:0];
+  assign address26 = IR[25:0];
+
   always@(IR, Clk)
   
     case(opcode)
       6'b000000: 
         case(func)
+          6'b100000: state = 7'd5;
           6'b100001: state = 7'd6;
+          6'b100010: state = 7'd9;
+          6'b100011: state = 7'd10;
+          6'b101010: state = 7'd11;
+          6'b101011: state = 7'd13;
+          6'b100100: state = 7'd21;
+          6'b100101: state = 7'd23;
+          6'b100110: state = 7'd25;
+          6'b100111: state = 7'd27;
+          6'b000000: state = 7'd29;
+          6'b000100: state = 7'd30;
+          6'b000011: state = 7'd31;
+          6'b000111: state = 7'd32;
+          6'b000010: state = 7'd33;
+          6'b000110: state = 7'd34;
+          6'b010000: state = 7'd71;
+          6'b010010: state = 7'd72;
+          6'b001011: state = 7'd73;
+          6'b001010: state = 7'd74;
+          6'b010001: state = 7'd75;
+          6'b010011: state = 7'd76;
+          6'b001001: state = 7'd99;
+          6'b001000: state = 7'd101;
+          6'b010000: state = 7'd103;
+          6'b110100: state = 7'd104;
+          6'b110000: state = 7'd106;
+          6'b110001: state = 7'd108;
+          6'b110010: state = 7'd110;
+          6'b110011: state = 7'd112;
+          6'b110110: state = 7'd114;
+          6'b011001: state = 7'd129;
+          6'b011010: state = 7'd131;
         endcase
+      6'b010000:
+        case(func)
+          6'b010000: state = 7'd102;
+          6'b011000: state = 7'd128;
+        endcase
+      6'b001000: state = 7'd7;
+      6'b001001: state = 7'd8;
+      6'b001010: state = 7'd15;
+      6'b001011: state = 7'd17;
+      6'b011100: 
+        case(func)
+          6'b100001: state = 7'd19;
+          6'b100000: state = 7'd20;
+        endcase
+      6'b001100: state = 7'd22;
+      6'b001101: state = 7'd24;
+      6'b001110: state = 7'd26;
+      6'b001111: state = 7'd28;
+      6'b100011: state = 7'd35;
+      6'b100001: state = 7'd39;
+      6'b100101: state = 7'd43;
+      6'b100000: state = 7'd47;
+      6'b100100: state = 7'd51;
+      6'b111111: state = 7'd55;
+      6'b101011: state = 7'd59;
+      6'b101001: state = 7'd63;
       6'b101000: state = 7'd67;
+      6'b000001: 
+        case(rt)
+          5'b10001: state = 7'd84;
+          5'b00000: state = 7'd92;
+        endcase
       6'b000100: state = 7'd80;
+      6'b000101: state = 7'd94;
+      6'b000010: state = 7'd96;
+      6'b000011: state = 7'd97;
+      6'b000001:
+        case(rt)
+          5'b01100: state = 7'd116;
+          5'b10000: state = 7'd118;
+          5'b01001: state = 7'd120;
+          5'b01010: state = 7'd122;
+          5'b01011: state = 7'd124;
+          5'b01110: state = 7'd126;
+        endcase
     endcase
-
-
- 
 endmodule
 
 module MUX_COND(output reg out, input I0, I1, input [1:0] S);
