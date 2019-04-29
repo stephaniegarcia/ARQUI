@@ -167,6 +167,6 @@ module datapath(input Clr, Clk);
 	registerclr MDR(MDR_out, MDR_Ld, Mux_MDR_out, Clr, Clk);
 	
 	ram512x8 RAM(DataOut, MOC, RW, MOV, MAR_out, MDR_out, opcode);
-	
+
 endmodule
 
