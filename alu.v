@@ -37,6 +37,10 @@ module alu(
             {carryFlag, out} = A - B;
             overflowFlag = (A[31] == 0 && B[31] == 1 && out[31] == 1) || (A[31] == 1 && B[31] == 0 && out[31] == 0);
             end
+        6'b000001: // MULTU
+            begin
+            out = A * B;
+            end
         6'b000010: //  SLT 
             begin
             if(A < B) 
