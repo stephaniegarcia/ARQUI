@@ -1,31 +1,31 @@
 //steph
 module alu(
-           input [31:0] A,B,             
+           input [31:0] A,B,
            input [5:0] opcode,
            output reg [31:0] out,
            input inputCarry,
-           output reg negativeFlag, zeroFlag, carryFlag, overflowFlag     
+           output reg negativeFlag, zeroFlag, carryFlag, overflowFlag
     );
     always @(*)
     begin
         case(opcode)
         6'b000000: // ADD
             begin
-            {carryFlag, out} = A + B; 
+            {carryFlag, out} = A + B;
              overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
             end
         6'b000000: // ADDU
             begin
-            {carryFlag, out} = A + B; 
+            {carryFlag, out} = A + B;
             end
-        6'b001000: //ADDI 
+        6'b001000: //ADDI
            begin
-            {carryFlag, out} = A + 16'b0000000000000000; 
+            {carryFlag, out} = A + 16'b0000000000000000;
             overflowFlag = ((A[31] == B[31]) && (A[31] != out[31])) ? 1'b1 : 1'b0;
             end
         6'b000101: //ADDIU
            begin
-            {carryFlag, out} = A + 16'b0000000000000000; 
+            {carryFlag, out} = A + 16'b0000000000000000;
             end
         6'b000001: // SUB fixed
             begin
@@ -37,9 +37,9 @@ module alu(
             {carryFlag, out} = A - B;
             overflowFlag = (A[31] == 0 && B[31] == 1 && out[31] == 1) || (A[31] == 1 && B[31] == 0 && out[31] == 0);
             end
-        6'b000010: //  SLT 
+        6'b000010: //  SLT
             begin
-            if(A < B) 
+            if(A < B)
             begin
                 out = 1'b1;
             end
@@ -47,15 +47,15 @@ module alu(
             end
         6'b000010: //  SLTU
             begin
-            if(A < B) 
+            if(A < B)
             begin
                 out = 1'b1;
             end
             else out = 1'b0;
-            end    
+            end
         6'b000010: //  SLTI ??
             begin
-            if(A <  16'b0000000000000000) 
+            if(A <  16'b0000000000000000)
             begin
                 out = 1'b1;
             end
@@ -63,7 +63,7 @@ module alu(
             end
         6'b000010: //  SLTIU ??
             begin
-            if(A <  16'b0000000000000000) 
+            if(A <  16'b0000000000000000)
             begin
                 out = 1'b1;
             end
@@ -71,7 +71,7 @@ module alu(
             end
         6'b000010: //  CLO ??
             begin
-            if(A < B) 
+            if(A < B)
             begin
                 out = 1'b0;
             end
@@ -79,15 +79,15 @@ module alu(
             end
         6'b000010: //  CLZ ??
             begin
-            if(A < B) 
+            if(A < B)
             begin
                 out = 1;
             end
             else out = 0;
             end
-        6'b000010: //  AND 
+        6'b000010: //  AND
             begin
-            out =  A & B; 
+            out =  A & B;
             end
         6'b000010: //  ANDI ??
             begin
@@ -95,64 +95,64 @@ module alu(
             end
         6'b000011: //  OR
             begin
-            out =  A | B; 
+            out =  A | B;
             end
         6'b000011: //  ORI ??
             begin
-            out = A |  16'b0000000000000000;  
+            out = A |  16'b0000000000000000;
             end
         6'b000100: //  XOR
            begin
-            out =  A ^ B;        
+            out =  A ^ B;
             end
         6'b000100: //  XORI ??
            begin
-            out = A ^ 16'b0000000000000000;  
+            out = A ^ 16'b0000000000000000;
             end
         6'b001001: // NOR
            begin
-            out = ~(A | B); 
+            out = ~(A | B);
             end
         6'b001001: // LUI ??
            begin
-            out = ~(A | B); 
+            out = ~(A | B);
             end
         6'b000110: // SLL
            begin
-            out = A << B; 
+            out = A << B;
             end
         6'b000110: // SLLV
           begin
-            out = A << B; 
+            out = A << B;
             end
         6'b000111: // SRA
            begin
-            out = A >> B; 
-  
+            out = A >> B;
+
             end
         6'b000111: // SRAV
            begin
-            out = A >> B; 
-  
+            out = A >> B;
+
             end
-        6'b000111: // SRL 
+        6'b000111: // SRL
            begin
-            out = A >> B; 
-  
+            out = A >> B;
+
             end
         6'b000111: // SRLV
            begin
-            out = A >> B; 
+            out = A >> B;
             end
         endcase
     //-----FLAGS------
     negativeFlag = out[31]; //NEGATIVE FLAG
-    zeroFlag = out == 0; //ZERO FLAG 
+    zeroFlag = out == 0; //ZERO FLAG
     end
 endmodule
 
 //---------------------------------------TESTER------------------------------------------
-`timescale 1ns / 1ps  
+`timescale 1ns / 1ps
 module tester;
 //Inputs
  reg[31:0] A,B;
@@ -164,9 +164,9 @@ module tester;
  integer i;
  alu test_unit(A,B,opcode,out,inputCarry,negativeFlag,zeroFlag,carryFlag,overflowFlag);
     initial begin
-  
+
         A = 32'h06;
-        B = 32'h0A;  
+        B = 32'h0A;
         //ADD TEST
         opcode = 6'b000000;
         #10;
@@ -200,5 +200,5 @@ module tester;
         opcode = 6'b000111;
          #3 $display("Opcode: %b, Binary Output: %b, Decimal Output: %d, Zero Flag: %d",opcode,out,out,zeroFlag);
         #10;
-    end  
+    end
 endmodule

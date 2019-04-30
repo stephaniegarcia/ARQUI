@@ -131,6 +131,7 @@ module datapath(input Clr, Clk);
     reg [31:0] IR;
     wire [6:0] Y, state;
     wire COND, MOC, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld;
+    wire inputCarry, negativeFlag, zeroFlag, carryFlag, overflowFlag;
     wire [5:0] opcode;
     wire[1:0] MuxA_Ld, MuxB_Ld, MuxReg_Ld;
 
@@ -156,9 +157,9 @@ module datapath(input Clr, Clk);
 
     wire[31:0] lo_out, hi_out;
 
-// Modules are Instantiated here. Missing ALU and Register File
+// Modules are Instantiated here. Missing ALU
 
-	Control_Unit CU(state, Y, state1, COND, IR, MOC, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, MuxA_Ld, MuxB_Ld, MuxReg_Ld, Clr, Clk);
+	Control_Unit CU(state, Y, state1, COND, IR, MOC, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, MuxA_Ld, MuxB_Ld, MuxReg_Ld, Clr, Clk, inputCarry, negativeFlag, zeroFlag, carryFlag, overflowFlag);
 
 	mux_4x1_32 MUXA(Mux_a_out, MuxA_Ld, PA, PC_out,  nPC_out, 32'd0);
 
@@ -178,7 +179,7 @@ module datapath(input Clr, Clk);
 
 	registerclr HI(hi_out, Hi_Ld, ALU_out, Clr, Clk);
 
-  shifter Shifter_SignExt(se_out,IR_out); 
+  shifter Shifter_SignExt(se_out,IR_out);
 
 	Mux_2x1_32 MUXMAR(Mux_MAR_out, MuxMAR_Ld, PC_out, ALU_out);
 
@@ -190,6 +191,8 @@ module datapath(input Clr, Clk);
 
 	ram512x8 RAM(DataOut, MOC, RW, MOV, MAR_out, MDR_out, opcode);
 
+  registerFile rg(PA, PB, IR_out[25:21], IR_out[20:16], Mux_reg_out, Mux_c_out, RF_Ld, Clk);
 
+  alu ALU(Mux_a_out, Mux_b_out, opcode, ALU_out, inputCarry, negativeFlag, zeroFlag, carryFlag, overflowFlag; );
 
 endmodule
