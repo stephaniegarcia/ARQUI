@@ -195,4 +195,6 @@ module datapath(input Clr, Clk);
 
   alu ALU(Mux_a_out, Mux_b_out, opcode, ALU_out, inputCarry, negativeFlag, zeroFlag, carryFlag, overflowFlag; );
 
+
+
 endmodule
