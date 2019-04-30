@@ -178,6 +178,8 @@ module datapath(input Clr, Clk);
 
 	registerclr HI(hi_out, Hi_Ld, ALU_out, Clr, Clk);
 
+  shifter Shifter_SignExt(se_out,IR_out); 
+
 	Mux_2x1_32 MUXMAR(Mux_MAR_out, MuxMAR_Ld, PC_out, ALU_out);
 
 	Mux_2x1_32 MUXMDR(Mux_MDR_out, MuxMDR_Ld, ALU_out, DataOut);
