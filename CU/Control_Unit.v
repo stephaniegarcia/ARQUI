@@ -1602,12 +1602,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
           CR = 6'b000001; //4
           state = Y;
 
-<<<<<<< HEAD
-          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,CR};
-        end
-=======
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state}; end      
->>>>>>> c1c52d94aa7414df7a8fb81c17014eccecb05179
            7'd47:
         begin
           N = 3'b011;//  32
