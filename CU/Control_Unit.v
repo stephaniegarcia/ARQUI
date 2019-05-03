@@ -2784,9 +2784,9 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
         begin
 
 		//NOT YET ****************** Condition
-		//  N = ;
-        //  Inv = 1'b;
-        //  S = 2'b;
+		  N = 3'b010;
+        Inv = 1'b0;
+         S = 2'b00;
           IR_Ld = 1'b0;
           MAR_Ld = 1'b0;
           MDR_Ld = 1'b0;
@@ -2840,12 +2840,10 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		//BNE
 		    7'd94:
         begin
-
-
 	//NOT YET ****************** Condition
-		//  N = ;
-        //  Inv = 1'b;
-        //  S = 2'b;
+		  N = 3'b010;
+          Inv = 1'b0;
+         S = 2'b00;
           IR_Ld = 1'b0;
           MAR_Ld = 1'b0;
           MDR_Ld = 1'b0;
@@ -2985,7 +2983,6 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		//JALR
 		    7'd99:
         begin
-
 		  N = 3'b011;;
           Inv = 1'b0;
           S = 2'b00;
@@ -3129,7 +3126,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd104:
         begin
 		  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3186,7 +3183,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd106:
         begin
 		   //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3242,7 +3239,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd108:
         begin
           //condition *****************
-		  //N = 3'b010;
+		N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3298,7 +3295,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd110:
         begin
       //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3353,7 +3350,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd112:
         begin
 		  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3408,7 +3405,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd114:
         begin
 		  //condition *****************
-		  //N = 3'b010;
+		      N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3465,7 +3462,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd116:
         begin
 	  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3492,6 +3489,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
         end
 
 		    7'd117:
+            begin
           N = 3'b011;
           Inv = 1'b0;
           S = 2'b00;
@@ -3521,7 +3519,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd118:
         begin
 		  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3578,7 +3576,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd120:
         begin
 			  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3634,7 +3632,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd122:
         begin
 				  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3690,7 +3688,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd124:
         begin
 				  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
@@ -3747,7 +3745,7 @@ module microStore(input [6:0] Y, output reg [43:0] data_out, output reg [6:0] st
 		    7'd126:
         begin
 		  //condition *****************
-		  //N = 3'b010;
+		  N = 3'b010;
           Inv = 1'b0;
           S = 2'b00;
           IR_Ld = 1'b0;
