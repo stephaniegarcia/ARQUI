@@ -253,62 +253,62 @@ mux mux_B(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, 
 
 //-----------------TEST-----------------
 
-module RegFile_test;
-  wire [31:0] out_PA;
-  wire [31:0] out_PB;
-  reg [31:0] in_PC;
-  reg [4:0] in_SA;
-  reg [4:0] in_SB;
-  reg [4:0] in_SC;
-  reg in_RFL;
-  reg in_clk;
+// module RegFile_test;
+//   wire [31:0] out_PA;
+//   wire [31:0] out_PB;
+//   reg [31:0] in_PC;
+//   reg [4:0] in_SA;
+//   reg [4:0] in_SB;
+//   reg [4:0] in_SC;
+//   reg in_RFL;
+//   reg in_clk;
   
   
 
 
-registerFile regFile(out_PA, out_PB, in_PC, in_SA, in_SB, in_SC, in_RFL, in_clk);
+// registerFile regFile(out_PA, out_PB, in_PC, in_SA, in_SB, in_SC, in_RFL, in_clk);
 
  
   
-initial begin
+// initial begin
     
     
-    in_PC = 32'b00000000000000000000000000000100;
-    in_SC = 32'b00000000000000000000000000000100;
-	#5 in_RFL= 1;
-    #5 in_clk= 1;    
+//     in_PC = 32'b00000000000000000000000000000100;
+//     in_SC = 32'b00000000000000000000000000000100;
+// 	#5 in_RFL= 1;
+//     #5 in_clk= 1;    
     
-  	#5 in_RFL= 0;
-    #5 in_clk= 0; 
+//   	#5 in_RFL= 0;
+//     #5 in_clk= 0; 
   
-    in_SA = 32'b00000000000000000000000000000100;
-    in_SB = 32'b00000000000000000000000000000011;
+//     in_SA = 32'b00000000000000000000000000000100;
+//     in_SB = 32'b00000000000000000000000000000011;
     
- 	#5	in_RFL= 1;
-  	#5  in_clk= 1;   
+//  	#5	in_RFL= 1;
+//   	#5  in_clk= 1;   
     
-    $display ("DATA en out_PA %b", out_PA);
-    $display ("DATA en out_PB %b", out_PB);
+//     $display ("DATA en out_PA %b", out_PA);
+//     $display ("DATA en out_PB %b", out_PB);
   
-    #5 in_RFL= 0;
-    #5 in_clk= 0; 
+//     #5 in_RFL= 0;
+//     #5 in_clk= 0; 
   
-    in_PC = 32'b11111111111111111111111111111111;
-    in_SC = 32'b00000000000000000000000000000011;
-	#5 in_RFL= 1;
-    #5 in_clk= 1;    
+//     in_PC = 32'b11111111111111111111111111111111;
+//     in_SC = 32'b00000000000000000000000000000011;
+// 	#5 in_RFL= 1;
+//     #5 in_clk= 1;    
     
-  	#5 in_RFL= 0;
-    #5 in_clk= 0; 
+//   	#5 in_RFL= 0;
+//     #5 in_clk= 0; 
   
-    in_SA = 32'b00000000000000000000000000000100;
-    in_SB = 32'b00000000000000000000000000000011;
+//     in_SA = 32'b00000000000000000000000000000100;
+//     in_SB = 32'b00000000000000000000000000000011;
     
- 	#5	in_RFL= 1;
-  	#5  in_clk= 1;   
+//  	#5	in_RFL= 1;
+//   	#5  in_clk= 1;   
     
-    $display ("DATA en out_PA %b", out_PA);
-    $display ("DATA en out_PB %b", out_PB);
-end
+//     $display ("DATA en out_PA %b", out_PA);
+//     $display ("DATA en out_PB %b", out_PB);
+// end
 
-endmodule
+// endmodule
