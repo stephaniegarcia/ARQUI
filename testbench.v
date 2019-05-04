@@ -14,8 +14,8 @@ end
 	//Precharge memory
 initial begin
 	// $display("--FETCHING INSTRUCTIONS--");
-	$display("  testcode_mips1.txt");
-    fo = $fopen("testcode_mips1.txt","r"); 
+	$display("  testcode_mips2.txt");
+    fo = $fopen("testcode_mips2.txt","r"); 
 	count = 9'd0;
 	index = 0;
 	
@@ -28,7 +28,12 @@ initial begin
 	$fclose(fo);
 	$display("--FETCHING FINISHED--");
 end 
-
+// initial begin
+// repeat(200) begin
+// #10
+// 		$display("Y= A + B = %b + %b", cpu.ALU.Y, cpu.ALU.A, cpu.ALU.B);
+// 	end
+// 	end
 initial begin
   $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b  ", cpu.st, cpu.MAR_out, cpu.PC_out, cpu.nPC_out, cpu.IR_out);
     //250 for 2
@@ -47,7 +52,7 @@ forever #5 Clk = ~Clk;
 end
 	
 	 // sim time
-parameter sim_time = 1700;
+parameter sim_time = 2000;
 //1700 for test 1
 //6000 for test2
 initial #sim_time $finish;
