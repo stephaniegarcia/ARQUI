@@ -49,7 +49,7 @@ module datapath(input Clr, Clk);
 			
 	signextend SE(se_out, IR_out[15:0]);
   
-  registerclr nPC(nPC_out, nPC_Ld, ALU_out, Clr, Clk);
+  registernPC nPC(nPC_out, nPC_Ld, ALU_out, Clr, Clk);
 	
 	registerclr PC(PC_out, PC_Ld, nPC_out, Clr, Clk);
 	
@@ -69,7 +69,7 @@ module datapath(input Clr, Clk);
 	
 	ram512x8 RAM(DataOut, MOC, RW, MOV, MAR_out, MDR_out, opcode);
 
- registerFile rg(PA, PB, IR_out[25:21], IR_out[20:16], Mux_reg_out, Mux_c_out, RF_Ld, Clk);
+ registerFile rg(PA, PB, Mux_reg_out, IR_out[25:21], IR_out[20:16], Mux_c_out, RF_Ld, Clk);
 
 	ALU ALU(ALU_out, N, Z, C, V, func, Mux_a_out, Mux_b_out);
 
@@ -134,6 +134,12 @@ endmodule
 module registerclr(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input Clk);	
   always @ (posedge Clk, posedge Clr)         
 		if(Clr) Q = 32'h0000_0000;
+		else if(ld)
+			Q = D;           
+endmodule
+module registernPC(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input Clk);	
+  always @ (posedge Clk, posedge Clr)         
+		if(Clr) Q = 32'd4;
 		else if(ld)
 			Q = D;           
 endmodule
