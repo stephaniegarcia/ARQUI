@@ -70,6 +70,7 @@ module datapath(input Clr, Clk);
 	ram512x8 RAM(DataOut, MOC, RW, MOV, MAR_out, MDR_out, opcode);
 
  registerFile rg(PA, PB, Mux_reg_out, IR_out[25:21], IR_out[20:16], Mux_c_out, RF_Ld, Clk);
+  // RegisterFile rg(PA, PB, Mux_reg_out, Mux_c_out, RF_Ld, Clk, IR_out[25:21], IR_out[20:16], Clr);
 
 	ALU ALU(ALU_out, N, Z, C, V, func, Mux_a_out, Mux_b_out);
 

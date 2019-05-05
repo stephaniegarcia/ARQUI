@@ -287,9 +287,10 @@ mux mux_B(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, 
 //  	#5	in_RFL= 1;
 //   	#5  in_clk= 1;   
     
-//     $display ("DATA en out_PA %b", out_PA);
-//     $display ("DATA en out_PB %b", out_PB);
-  
+//     $display ("DATA en out_PA %b reg0 %d reg1 %d", out_PA, regFile.Q0, regFile.Q1);
+//     $display ("DATA en out_PB %b reg0 %d reg1 %d", out_PB, regFile.Q0, regFile.Q1);
+//         $display(" \n\nReg0 %d  reg1 %d reg2 %d reg3 %d reg4 %d reg5 %d\n \n\nReg6 %d  reg7 %d reg8 %d reg9 %d reg10 %d reg11 %d\n \n\nReg12 %d  reg13 %d reg14 %d reg15 %d reg16 %d reg17 %d\n \n\nReg18 %d  reg19 %d reg20 %d reg21 %d reg22 %d reg23 %d\n", regFile.Q0,regFile.Q1,regFile.Q2,regFile.Q3,regFile.Q4,regFile.Q5, regFile.Q6,regFile.Q7,regFile.Q8,regFile.Q9,regFile.Q10,regFile.Q11, regFile.Q12,regFile.Q13,regFile.Q14,regFile.Q15,regFile.Q16,regFile.Q17, regFile.Q18,regFile.Q19,regFile.Q20,regFile.Q21,regFile.Q22,regFile.Q23);
+
 //     #5 in_RFL= 0;
 //     #5 in_clk= 0; 
   
@@ -306,9 +307,10 @@ mux mux_B(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, 
     
 //  	#5	in_RFL= 1;
 //   	#5  in_clk= 1;   
-    
-//     $display ("DATA en out_PA %b", out_PA);
-//     $display ("DATA en out_PB %b", out_PB);
+
+//     $display ("DATA en out_PA %b reg0 %d reg1 %d", out_PA, regFile.Q0, regFile.Q1);
+//     $display ("DATA en out_PB %b reg0 %d reg1 %d", out_PB, regFile.Q0, regFile.Q1);
+
 // end
 
 // endmodule

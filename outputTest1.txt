@@ -1,0 +1,685 @@
+  testcode_mips1.txt
+--FETCHING FINISHED--
+Mem[           0 ]= 00100100   
+Mem[           1 ]= 00000001   
+Mem[           2 ]= 00000000   
+Mem[           3 ]= 00101100   
+Mem[           4 ]= 10010000   
+Mem[           5 ]= 00100010   
+Mem[           6 ]= 00000000   
+Mem[           7 ]= 00000000   
+Mem[           8 ]= 10010000   
+Mem[           9 ]= 00100011   
+Mem[          10 ]= 00000000   
+Mem[          11 ]= 00000010   
+Mem[          12 ]= 00000000   
+Mem[          13 ]= 00000000   
+Mem[          14 ]= 00101000   
+Mem[          15 ]= 00100001   
+Mem[          16 ]= 00000000   
+Mem[          17 ]= 10100010   
+Mem[          18 ]= 00101000   
+Mem[          19 ]= 00100001   
+Mem[          20 ]= 00100100   
+Mem[          21 ]= 01100011   
+Mem[          22 ]= 11111111   
+Mem[          23 ]= 11111111   
+Mem[          24 ]= 00011100   
+Mem[          25 ]= 01100000   
+Mem[          26 ]= 11111111   
+Mem[          27 ]= 11111101   
+Mem[          28 ]= 00000000   
+Mem[          29 ]= 00000000   
+Mem[          30 ]= 00000000   
+Mem[          31 ]= 00000000   
+Mem[          32 ]= 10100000   
+Mem[          33 ]= 00100101   
+Mem[          34 ]= 00000000   
+Mem[          35 ]= 00000001   
+Mem[          36 ]= 00010000   
+Mem[          37 ]= 00000000   
+Mem[          38 ]= 00000000   
+Mem[          39 ]= 00000010   
+Mem[          40 ]= 00000000   
+Mem[          41 ]= 00000000   
+Mem[          42 ]= 00000000   
+Mem[          43 ]= 00000000   
+Mem[          44 ]= 00011001   
+Mem[          45 ]= 00000101   
+Mem[          46 ]= 00000111   
+Mem[          47 ]= 00000100   
+Mem[          48 ]= 00010000   
+Mem[          49 ]= 00000000   
+Mem[          50 ]= 11111111   
+Mem[          51 ]= 11111111   
+Mem[          52 ]= 00000000   
+Mem[          53 ]= 00000000   
+Mem[          54 ]= 00000000   
+Mem[          55 ]= 00000000   
+Mem[          56 ]= xxxxxxxx   
+Mem[          57 ]= xxxxxxxx   
+Mem[          58 ]= xxxxxxxx   
+Mem[          59 ]= xxxxxxxx   
+Mem[          60 ]= xxxxxxxx   
+Mem[          61 ]= xxxxxxxx   
+Mem[          62 ]= xxxxxxxx   
+Mem[          63 ]= xxxxxxxx   
+Mem[          64 ]= xxxxxxxx   
+Mem[          65 ]= xxxxxxxx   
+Mem[          66 ]= xxxxxxxx   
+Mem[          67 ]= xxxxxxxx   
+Mem[          68 ]= xxxxxxxx   
+Mem[          69 ]= xxxxxxxx   
+Mem[          70 ]= xxxxxxxx   
+Mem[          71 ]= xxxxxxxx   
+Mem[          72 ]= xxxxxxxx   
+Mem[          73 ]= xxxxxxxx   
+Mem[          74 ]= xxxxxxxx   
+Mem[          75 ]= xxxxxxxx   
+Mem[          76 ]= xxxxxxxx   
+Mem[          77 ]= xxxxxxxx   
+Mem[          78 ]= xxxxxxxx   
+Mem[          79 ]= xxxxxxxx   
+Mem[          80 ]= xxxxxxxx   
+Mem[          81 ]= xxxxxxxx   
+Mem[          82 ]= xxxxxxxx   
+Mem[          83 ]= xxxxxxxx   
+Mem[          84 ]= xxxxxxxx   
+Mem[          85 ]= xxxxxxxx   
+Mem[          86 ]= xxxxxxxx   
+Mem[          87 ]= xxxxxxxx   
+Mem[          88 ]= xxxxxxxx   
+Mem[          89 ]= xxxxxxxx   
+Mem[          90 ]= xxxxxxxx   
+Mem[          91 ]= xxxxxxxx   
+Mem[          92 ]= xxxxxxxx   
+Mem[          93 ]= xxxxxxxx   
+Mem[          94 ]= xxxxxxxx   
+Mem[          95 ]= xxxxxxxx   
+Mem[          96 ]= xxxxxxxx   
+Mem[          97 ]= xxxxxxxx   
+Mem[          98 ]= xxxxxxxx   
+Mem[          99 ]= xxxxxxxx   
+Mem[         100 ]= xxxxxxxx   
+Mem[         101 ]= xxxxxxxx   
+Mem[         102 ]= xxxxxxxx   
+Mem[         103 ]= xxxxxxxx   
+Mem[         104 ]= xxxxxxxx   
+Mem[         105 ]= xxxxxxxx   
+Mem[         106 ]= xxxxxxxx   
+Mem[         107 ]= xxxxxxxx   
+Mem[         108 ]= xxxxxxxx   
+Mem[         109 ]= xxxxxxxx   
+Mem[         110 ]= xxxxxxxx   
+Mem[         111 ]= xxxxxxxx   
+Mem[         112 ]= xxxxxxxx   
+Mem[         113 ]= xxxxxxxx   
+Mem[         114 ]= xxxxxxxx   
+Mem[         115 ]= xxxxxxxx   
+Mem[         116 ]= xxxxxxxx   
+Mem[         117 ]= xxxxxxxx   
+Mem[         118 ]= xxxxxxxx   
+Mem[         119 ]= xxxxxxxx   
+Mem[         120 ]= xxxxxxxx   
+Mem[         121 ]= xxxxxxxx   
+Mem[         122 ]= xxxxxxxx   
+Mem[         123 ]= xxxxxxxx   
+Mem[         124 ]= xxxxxxxx   
+Mem[         125 ]= xxxxxxxx   
+Mem[         126 ]= xxxxxxxx   
+Mem[         127 ]= xxxxxxxx   
+Mem[         128 ]= xxxxxxxx   
+Mem[         129 ]= xxxxxxxx   
+Mem[         130 ]= xxxxxxxx   
+Mem[         131 ]= xxxxxxxx   
+Mem[         132 ]= xxxxxxxx   
+Mem[         133 ]= xxxxxxxx   
+Mem[         134 ]= xxxxxxxx   
+Mem[         135 ]= xxxxxxxx   
+Mem[         136 ]= xxxxxxxx   
+Mem[         137 ]= xxxxxxxx   
+Mem[         138 ]= xxxxxxxx   
+Mem[         139 ]= xxxxxxxx   
+Mem[         140 ]= xxxxxxxx   
+Mem[         141 ]= xxxxxxxx   
+Mem[         142 ]= xxxxxxxx   
+Mem[         143 ]= xxxxxxxx   
+Mem[         144 ]= xxxxxxxx   
+Mem[         145 ]= xxxxxxxx   
+Mem[         146 ]= xxxxxxxx   
+Mem[         147 ]= xxxxxxxx   
+Mem[         148 ]= xxxxxxxx   
+Mem[         149 ]= xxxxxxxx   
+Mem[         150 ]= xxxxxxxx   
+Mem[         151 ]= xxxxxxxx   
+Mem[         152 ]= xxxxxxxx   
+Mem[         153 ]= xxxxxxxx   
+Mem[         154 ]= xxxxxxxx   
+Mem[         155 ]= xxxxxxxx   
+Mem[         156 ]= xxxxxxxx   
+Mem[         157 ]= xxxxxxxx   
+Mem[         158 ]= xxxxxxxx   
+Mem[         159 ]= xxxxxxxx   
+Mem[         160 ]= xxxxxxxx   
+Mem[         161 ]= xxxxxxxx   
+Mem[         162 ]= xxxxxxxx   
+Mem[         163 ]= xxxxxxxx   
+Mem[         164 ]= xxxxxxxx   
+Mem[         165 ]= xxxxxxxx   
+Mem[         166 ]= xxxxxxxx   
+Mem[         167 ]= xxxxxxxx   
+Mem[         168 ]= xxxxxxxx   
+Mem[         169 ]= xxxxxxxx   
+Mem[         170 ]= xxxxxxxx   
+Mem[         171 ]= xxxxxxxx   
+Mem[         172 ]= xxxxxxxx   
+Mem[         173 ]= xxxxxxxx   
+Mem[         174 ]= xxxxxxxx   
+Mem[         175 ]= xxxxxxxx   
+Mem[         176 ]= xxxxxxxx   
+Mem[         177 ]= xxxxxxxx   
+Mem[         178 ]= xxxxxxxx   
+Mem[         179 ]= xxxxxxxx   
+Mem[         180 ]= xxxxxxxx   
+Mem[         181 ]= xxxxxxxx   
+Mem[         182 ]= xxxxxxxx   
+Mem[         183 ]= xxxxxxxx   
+Mem[         184 ]= xxxxxxxx   
+Mem[         185 ]= xxxxxxxx   
+Mem[         186 ]= xxxxxxxx   
+Mem[         187 ]= xxxxxxxx   
+Mem[         188 ]= xxxxxxxx   
+Mem[         189 ]= xxxxxxxx   
+Mem[         190 ]= xxxxxxxx   
+Mem[         191 ]= xxxxxxxx   
+Mem[         192 ]= xxxxxxxx   
+Mem[         193 ]= xxxxxxxx   
+Mem[         194 ]= xxxxxxxx   
+Mem[         195 ]= xxxxxxxx   
+Mem[         196 ]= xxxxxxxx   
+Mem[         197 ]= xxxxxxxx   
+Mem[         198 ]= xxxxxxxx   
+Mem[         199 ]= xxxxxxxx   
+Mem[         200 ]= xxxxxxxx   
+Mem[         201 ]= xxxxxxxx   
+Mem[         202 ]= xxxxxxxx   
+Mem[         203 ]= xxxxxxxx   
+Mem[         204 ]= xxxxxxxx   
+Mem[         205 ]= xxxxxxxx   
+Mem[         206 ]= xxxxxxxx   
+Mem[         207 ]= xxxxxxxx   
+Mem[         208 ]= xxxxxxxx   
+Mem[         209 ]= xxxxxxxx   
+Mem[         210 ]= xxxxxxxx   
+Mem[         211 ]= xxxxxxxx   
+Mem[         212 ]= xxxxxxxx   
+Mem[         213 ]= xxxxxxxx   
+Mem[         214 ]= xxxxxxxx   
+Mem[         215 ]= xxxxxxxx   
+Mem[         216 ]= xxxxxxxx   
+Mem[         217 ]= xxxxxxxx   
+Mem[         218 ]= xxxxxxxx   
+Mem[         219 ]= xxxxxxxx   
+Mem[         220 ]= xxxxxxxx   
+Mem[         221 ]= xxxxxxxx   
+Mem[         222 ]= xxxxxxxx   
+Mem[         223 ]= xxxxxxxx   
+Mem[         224 ]= xxxxxxxx   
+Mem[         225 ]= xxxxxxxx   
+Mem[         226 ]= xxxxxxxx   
+Mem[         227 ]= xxxxxxxx   
+Mem[         228 ]= xxxxxxxx   
+Mem[         229 ]= xxxxxxxx   
+Mem[         230 ]= xxxxxxxx   
+Mem[         231 ]= xxxxxxxx   
+Mem[         232 ]= xxxxxxxx   
+Mem[         233 ]= xxxxxxxx   
+Mem[         234 ]= xxxxxxxx   
+Mem[         235 ]= xxxxxxxx   
+Mem[         236 ]= xxxxxxxx   
+Mem[         237 ]= xxxxxxxx   
+Mem[         238 ]= xxxxxxxx   
+Mem[         239 ]= xxxxxxxx   
+Mem[         240 ]= xxxxxxxx   
+Mem[         241 ]= xxxxxxxx   
+Mem[         242 ]= xxxxxxxx   
+Mem[         243 ]= xxxxxxxx   
+Mem[         244 ]= xxxxxxxx   
+Mem[         245 ]= xxxxxxxx   
+Mem[         246 ]= xxxxxxxx   
+Mem[         247 ]= xxxxxxxx   
+Mem[         248 ]= xxxxxxxx   
+Mem[         249 ]= xxxxxxxx   
+State:   0 mar_out          0 pc_out          0 npc_out          4  IR  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+State:   1 mar_out          0 pc_out          0 npc_out          4  IR  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+State:   2 mar_out          0 pc_out          0 npc_out          4  IR  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+State:   3 mar_out          0 pc_out          0 npc_out          4  IR  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+State:   4 mar_out          0 pc_out          0 npc_out          4  IR  00100100000000010000000000101100  
+State:   8 mar_out          0 pc_out          0 npc_out          4  IR  00100100000000010000000000101100  
+State:   1 mar_out          0 pc_out          4 npc_out          4  IR  00100100000000010000000000101100  
+State:   2 mar_out          0 pc_out          4 npc_out          4  IR  00100100000000010000000000101100  
+State:   3 mar_out          0 pc_out          4 npc_out          4  IR  00100100000000010000000000101100  
+State:   4 mar_out          4 pc_out          4 npc_out          4  IR  00100100000000010000000000101100  
+State:   8 mar_out          4 pc_out          4 npc_out          4  IR  00100100000000010000000000101100  
+State:   1 mar_out          4 pc_out          8 npc_out          8  IR  00100100000000010000000000101100  
+State:   2 mar_out          4 pc_out          8 npc_out          8  IR  00100100000000010000000000101100  
+State:   3 mar_out          4 pc_out          8 npc_out          8  IR  00100100000000010000000000101100  
+State:   4 mar_out          8 pc_out          8 npc_out          8  IR  10010000001000100000000000000000  
+State:  51 mar_out          8 pc_out          8 npc_out          8  IR  10010000001000100000000000000000  
+State:  52 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000100000000000000000  
+State:  53 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000100000000000000000  
+State:  54 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000100000000000000000  
+State:   1 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000100000000000000000  
+State:   2 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000100000000000000000  
+State:   3 mar_out          8 pc_out          8 npc_out         12  IR  00000000000000000000000010010000  
+State:   4 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000110000000000000010  
+State:  51 mar_out          8 pc_out          8 npc_out         12  IR  10010000001000110000000000000010  
+State:  52 mar_out          8 pc_out         12 npc_out         12  IR  10010000001000110000000000000010  
+State:  53 mar_out          8 pc_out         12 npc_out         12  IR  10010000001000110000000000000010  
+State:  54 mar_out          8 pc_out         12 npc_out         12  IR  10010000001000110000000000000010  
+State:   1 mar_out          8 pc_out         12 npc_out         12  IR  10010000001000110000000000000010  
+State:   2 mar_out         12 pc_out         12 npc_out         12  IR  10010000001000110000000000000010  
+State:   3 mar_out         12 pc_out         12 npc_out         12  IR  00000000000000000000000010010000  
+State:   4 mar_out         12 pc_out         12 npc_out         12  IR  00000000000000000010100000100001  
+State:   6 mar_out         12 pc_out         12 npc_out         12  IR  00000000000000000010100000100001  
+State:   1 mar_out         12 pc_out         12 npc_out         16  IR  00000000000000000010100000100001  
+State:   2 mar_out         12 pc_out         12 npc_out         16  IR  00000000000000000010100000100001  
+State:   3 mar_out         12 pc_out         12 npc_out         16  IR  00000000000000000010100000100001  
+State:   4 mar_out         12 pc_out         12 npc_out         16  IR  00000000000000000010100000100001  
+State:   6 mar_out         12 pc_out         12 npc_out         16  IR  00000000000000000010100000100001  
+State:   1 mar_out         12 pc_out         16 npc_out         16  IR  00000000000000000010100000100001  
+State:   2 mar_out         12 pc_out         16 npc_out         16  IR  00000000000000000010100000100001  
+State:   3 mar_out         12 pc_out         16 npc_out         16  IR  00000000000000000010100000100001  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00000000000000000010100000100001  
+State:   6 mar_out         16 pc_out         16 npc_out         16  IR  00000000000000000010100000100001  
+State:   1 mar_out         16 pc_out         16 npc_out         20  IR  00000000000000000010100000100001  
+State:   2 mar_out         16 pc_out         16 npc_out         20  IR  00000000000000000010100000100001  
+State:   3 mar_out         16 pc_out         16 npc_out         20  IR  00000000000000000010100000100001  
+State:   4 mar_out         16 pc_out         16 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         16 pc_out         16 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   3 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   6 mar_out         20 pc_out         20 npc_out         20  IR  00000000101000100010100000100001  
+State:   1 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   2 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   3 mar_out         20 pc_out         20 npc_out         24  IR  00000000101000100010100000100001  
+State:   4 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         20 pc_out         20 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   2 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   3 mar_out         20 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   8 mar_out         24 pc_out         24 npc_out         24  IR  00100100011000111111111111111111  
+State:   1 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   2 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   3 mar_out         24 pc_out         24 npc_out         28  IR  00100100011000111111111111111111  
+State:   4 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  86 mar_out         24 pc_out         24 npc_out         28  IR  00011100011000001111111111111101  
+State:  87 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   1 mar_out         24 pc_out         28 npc_out         28  IR  00011100011000001111111111111101  
+State:   2 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   3 mar_out         24 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:   4 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  86 mar_out         20 pc_out         20 npc_out         20  IR  00011100011000001111111111111101  
+State:  87 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   1 mar_out         20 pc_out         24 npc_out         24  IR  00011100011000001111111111111101  
+State:   2 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   3 mar_out         20 pc_out         16 npc_out         16  IR  00011100011000001111111111111101  
+State:   4 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   8 mar_out         16 pc_out         16 npc_out         16  IR  00100100011000111111111111111111  
+State:   1 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  
+State:   2 mar_out         16 pc_out         20 npc_out         20  IR  00100100011000111111111111111111  

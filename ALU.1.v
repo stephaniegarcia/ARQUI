@@ -80,8 +80,8 @@ begin
 
 
 		6'b010110: Y <= A + 4 + 4 * B;                       // Operation: Branches and Jumps
-		6'b101000: Y <= A + B;                            //SB
-
+		
+		
 		/* 6'b100100: begin{C,Y}=A&B; 
 		N=Y[31];
 		if(Y==0) Z=1;
@@ -182,4 +182,5 @@ begin
 	endcase
 	
 end
+
 endmodule
