@@ -563,7 +563,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           MDR_Ld = 1'b0;//  23
           MuxMAR_Ld = 1'b0;//  22
           RF_Ld = 1'b1;// 21
-          MuxC_Ld = 1'b0;// 20
+          MuxC_Ld = 1'b1;// 20
           PC_Ld = 1'b0;// 19
           nPC_Ld = 1'b0;// 18
           MuxMDR_Ld = 1'b0;// 17
