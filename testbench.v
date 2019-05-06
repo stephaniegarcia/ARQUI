@@ -38,7 +38,11 @@ initial begin
 	end
 
 initial begin
+<<<<<<< HEAD
   $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b  \n\nReg0 %d  \nreg1 %d \nreg2 %d \nreg3 %d \nreg4 %d \nreg5 %d\nReg6 %d  \nreg7 %d \nreg8 %d \nreg9 %d \nreg10 %d  \n\nPA %d \nPB %d \nPC %d \n\nSA %d \nSB %d \nSC %d\n \n \n", cpu.st, cpu.MAR_out, cpu.PC_out, cpu.nPC_out, cpu.IR_out, cpu.rg.Q0,cpu.rg.Q1,cpu.rg.Q2,cpu.rg.Q3,cpu.rg.Q4,cpu.rg.Q5, cpu.rg.Q6,cpu.rg.Q7,cpu.rg.Q8,cpu.rg.Q9,cpu.rg.Q10, cpu.PA, cpu.PB, cpu.Mux_reg_out, cpu.IR_out[25:21], cpu.IR_out[20:16], cpu.Mux_c_out);
+=======
+  $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b  \n\nReg0 %d  reg1 %d reg2 %d reg3 %d reg4 %d reg5 %d\n \n\nReg6 %d  reg7 %d reg8 %d reg9 %d reg10 %d  PA %d PB %d PC %d SA %d SB %d SC %d\n \n \n", cpu.st, cpu.MAR_out, cpu.PC_out, cpu.nPC_out, cpu.IR_out, cpu.rg.Q0,cpu.rg.Q1,cpu.rg.Q2,cpu.rg.Q3,cpu.rg.Q4,cpu.rg.Q5, cpu.rg.Q6,cpu.rg.Q7,cpu.rg.Q8,cpu.rg.Q9,cpu.rg.Q10, cpu.PA, cpu.PB, cpu.Mux_reg_out, cpu.IR_out[25:21], cpu.IR_out[20:16], cpu.Mux_c_out);
+>>>>>>> 7f97cedf5043540850c0f90357543ad30651bd62
     //250 for 2
     //60 for 1
 	while(count < 250) begin
