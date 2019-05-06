@@ -340,8 +340,8 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           PC_Ld = 1'b0;// 19
           nPC_Ld = 1'b0;// 18
           MuxMDR_Ld = 1'b0;// 17
-          MOV = 1'b1;// 16
-          RW = 1'b1;// 15
+          MOV = 1'b0;// 16
+          RW = 1'b0;// 15
           opcode = 6'b100011;// 14
           func = 6'b000000;
           MuxA_Ld = 2'b01;// 8
