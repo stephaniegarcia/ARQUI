@@ -65,7 +65,7 @@ wire[31:0] Q18;
 wire[31:0] Q30;
 	wire[31:0] Q31;
 
-      registers r00 (Q0, 32'b0000000000000000000000, Ld[0], in_clk);
+      registers r00 (Q0, 32'b0000000000000000000000, 1'b1, in_clk);
       registers r01 (Q1, in_PC, Ld[1], in_clk);
       registers r02 (Q2, in_PC, Ld[2], in_clk);
       registers r03 (Q3, in_PC, Ld[3], in_clk);
