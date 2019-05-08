@@ -80,8 +80,19 @@ begin
 
 
 		6'b010110: Y <= A + 4 + 4 * B;                       // Operation: Branches and Jumps
-		
-		
+		     6'b111000: {C, Y} <= B << A;                         // Operation: SLL
+            6'b111100: {C, Y} <= A << B;                         // Operation: SLLV
+            6'b111110: begin 
+                                                       // Operation: SRA
+                {C, Y} = $signed(B) >>> A;
+                
+            end
+            6'b111001: begin                                        // Operation: SRAV
+                {C, Y} = $signed(B) >>> A;
+                
+            end
+            6'b110110: {C, Y} <= B >> A;                         // Operation: SRL
+            6'b101110: {C, Y} <= A >> B;                         // Operation: SRLV
 		/* 6'b100100: begin{C,Y}=A&B; 
 		N=Y[31];
 		if(Y==0) Z=1;
