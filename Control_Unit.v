@@ -39,7 +39,7 @@ next_state_address_selector nsas( M,  N, Sts);
 state_adder stadd( D, st, 8'd1); 
 incrementer_register increg( Q,  D, Clk);
 MUX_ROM mxrom( st, state, state1, CR, Q, M, Clr); 
-microStore mcStr(st, data_out, Y);  
+microStore mcStr(st, data_out);  
 control_register Creg(N, Inv, S, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, func, MuxA_Ld, MuxB_Ld, MuxReg_Ld, CR,Y, data_out, Clr, Clk);
 
 endmodule//////////////////////////////////////////////////////////////////////////////////////////
@@ -265,7 +265,7 @@ module inverter(output reg out, input in, inv);
 
 endmodule
 
-module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] state);
+module microStore(input [7:0] Y, output reg [52:0] data_out );
 
   reg[2:0] N;
   reg Inv;
@@ -287,6 +287,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
   reg[1:0] MuxA_Ld, MuxB_Ld, MuxReg_Ld;
   reg[7:0] CR;
   reg dummy1;
+  reg [7:0] state;
   reg [1:0] dummy2;
   reg [5:0] dummy3;
 
@@ -361,20 +362,20 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Inv = 1'b0;//  28
           S = 2'b00;//  27
           IR_Ld = 1'b1;//  25
-          MAR_Ld = 1'b0;//  24
+          MAR_Ld = 1'b1;//  24
           MDR_Ld = 1'b0;//  23
           MuxMAR_Ld = 1'b0;//  22
-          RF_Ld = 1'b1;// 21
+          RF_Ld = 1'b0;// 21
           MuxC_Ld = 1'b0;// 20
-          PC_Ld = 1'b0;// 19
-          nPC_Ld = 1'b0;// 18
+          PC_Ld = 1'b1;// 19
+          nPC_Ld = 1'b1;// 18
           MuxMDR_Ld = 1'b0;// 17
           MOV = 1'b1;// 16
           RW = 1'b1;// 15
           opcode = 6'b100011;// 14
-          func = 6'b000000;
-          MuxA_Ld = 2'b00;// 8
-          MuxB_Ld = 2'b00; // 6
+          func = 6'b100001;
+            MuxA_Ld = 2'b01;// 8
+            MuxB_Ld = 2'b11; // 6
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
@@ -436,37 +437,36 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
             Hi_Ld = 1'b0;
             Lo_Ld = 1'b0;
             MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
 
         end
-        8'd254:
-        begin
-            resetSignals(); N = 3'b011;//  32
-            Inv = 1'b0;//  28
-            S = 2'b00;//  27
-            RF_Ld = 1'b1;
-            CR = 8'b11111111; //4
-            state = Y;
-          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
+        // 8'd254:
+        // begin
+        //     resetSignals(); N = 3'b011;//  32
+        //     Inv = 1'b0;//  28
+        //     S = 2'b00;//  27
+        //     RF_Ld = 1'b1;
+        //     CR = 8'b11111111; //4
+        //     state = Y;
+        //   data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
 
-        end
-           8'd255:
-        begin
-            resetSignals(); N = 3'b010;//  32
-            Inv = 1'b0;//  28
-            S = 2'b00;//  27
-            PC_Ld = 1'b1;// 19
-            nPC_Ld = 1'b1;// 18
-            MuxA_Ld = 2'b01;// 8
-            MuxB_Ld = 2'b11; // 6
-            func =6'b100001;
-            CR = 8'b00000001; //4
-            state = Y;
-          data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
+        // end
+        //    8'd255:
+        // begin
+        //     resetSignals(); N = 3'b010;//  32
+        //     Inv = 1'b0;//  28
+        //     S = 2'b00;//  27
+        //     PC_Ld = 1'b1;// 19
+        //     nPC_Ld = 1'b1;// 18
 
-        end
+        //     func =6'b100001;
+        //     CR = 8'b00000001; //4
+        //     state = Y;
+        //   data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
+
+        // end
       8'd5:
         begin
           resetSignals(); N = 3'b010;//  32
@@ -518,7 +518,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -569,12 +569,12 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           RW = 1'b0;// 15
           opcode = 6'b001001;// 14
           func = 6'b001001;
-          MuxA_Ld = 2'b01;// 8
+          MuxA_Ld = 2'b11;// 8
           MuxB_Ld = 2'b01; // 6
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -586,7 +586,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
         //     Inv = 1'b0;//  28
         //     RF_Ld = 1'b1;
         //     S = 2'b00;//  27
-        //     CR = 8'b11111110; //4
+        //     CR = 8'b00000001; //4
         //     state = Y;
         //     data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
         //   end
@@ -641,7 +641,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -753,7 +753,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1005,7 +1005,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1173,7 +1173,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1229,7 +1229,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1285,7 +1285,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1425,7 +1425,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1792,7 +1792,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
          state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -1876,7 +1876,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2111,7 +2111,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Inv = 1'b0;//  28
           S = 2'b00;//  27
           
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2365,7 +2365,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2393,7 +2393,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2477,7 +2477,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2505,7 +2505,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2561,7 +2561,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2617,7 +2617,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
          
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2673,7 +2673,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2729,7 +2729,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
          state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2785,7 +2785,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2841,7 +2841,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2897,7 +2897,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -2960,7 +2960,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
@@ -3021,7 +3021,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out, output reg [7:0] st
           Hi_Ld = 1'b0;
           Lo_Ld = 1'b0;
           MuxReg_Ld = 2'b00;
-          CR = 8'b11111110; //4
+          CR = 8'b00000001; //4
           state = Y;
 
           data_out = {N,Inv,S,IR_Ld,MAR_Ld,MDR_Ld,MuxMAR_Ld,RF_Ld,MuxC_Ld,PC_Ld,nPC_Ld,MuxMDR_Ld,MOV,RW,opcode,func,MuxA_Ld,MuxB_Ld,Hi_Ld,Lo_Ld,MuxReg_Ld,CR,state};                                 
