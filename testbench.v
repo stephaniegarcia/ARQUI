@@ -38,8 +38,8 @@ initial begin
 	end
 
 initial begin
-// $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b ", cpu.Y, cpu.MAR.Q, cpu.PC.Q, cpu.nPC.Q, cpu.IR.Q);
-  $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b  \n\nReg0 %d  reg1 %d reg2 %d reg3 %d reg4 %d reg5 %d\n \n\nReg6 %d  reg7 %d reg8 %d reg9 %d reg10 %d  PA %d PB %d PC %d SA %d SB %d SC %d\n \n \n \nY= A + B = %d + %d\n ALUout %d   in_SA %d", cpu.st, cpu.MAR_out, cpu.PC_out, cpu.nPC_out, cpu.IR_out, cpu.rg.Q0,cpu.rg.Q1,cpu.rg.Q2,cpu.rg.Q3,cpu.rg.Q4,cpu.rg.Q5, cpu.rg.Q6,cpu.rg.Q7,cpu.rg.Q8,cpu.rg.Q9,cpu.rg.Q10, cpu.PA, cpu.PB, cpu.Mux_reg_out, cpu.IR_out[25:21], cpu.IR_out[20:16], cpu.Mux_c_out, cpu.ALU.A, cpu.ALU.B, cpu.ALU.Y, cpu.rg.in_SA);
+$monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b ", cpu.Y, cpu.MAR.Q, cpu.PC.Q, cpu.nPC.Q, cpu.IR.Q);
+  // $monitor("State: %d mar_out %d pc_out %d npc_out %d  IR  %b  \n\nReg0 %d  reg1 %d reg2 %d reg3 %d reg4 %d reg5 %d\n \n\nReg6 %d  reg7 %d reg8 %d reg9 %d reg10 %d  PA %d PB %d PC %d SA %d SB %d SC %d\n \n \n \nY= A + B = %d + %d\n ALUout %d   in_SA %d", cpu.st, cpu.MAR_out, cpu.PC_out, cpu.nPC_out, cpu.IR_out, cpu.rg.Q0,cpu.rg.Q1,cpu.rg.Q2,cpu.rg.Q3,cpu.rg.Q4,cpu.rg.Q5, cpu.rg.Q6,cpu.rg.Q7,cpu.rg.Q8,cpu.rg.Q9,cpu.rg.Q10, cpu.PA, cpu.PB, cpu.Mux_reg_out, cpu.IR_out[25:21], cpu.IR_out[20:16], cpu.Mux_c_out, cpu.ALU.A, cpu.ALU.B, cpu.ALU.Y, cpu.rg.in_SA);
     //250 for 2
     //60 for 1
 	while(count < 250) begin
@@ -56,7 +56,7 @@ forever #5 Clk = ~Clk;
 end
 
 	 // sim time
-parameter sim_time = 1000;
+parameter sim_time = 2000;
 //1700 for test 1
 //6000 for test2
 initial #sim_time $finish;

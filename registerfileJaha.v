@@ -12,7 +12,7 @@ Author: Jahannie Torres-Rodríguez
 
 
 
-module registerFile(out_PA, out_PB, in_PC, in_SA, in_SB, in_SC, in_RFL, in_clk);
+module registerFile(out_PA, out_PB, in_PC, in_SA, in_SB, in_SC, in_RFL, in_clk, clr);
 	output [31:0] out_PA;
 	output [31:0] out_PB;
 	 input [31:0] in_PC;
@@ -22,7 +22,7 @@ module registerFile(out_PA, out_PB, in_PC, in_SA, in_SB, in_SC, in_RFL, in_clk);
 
 	 input in_RFL;
 
-	 input in_clk;
+	 input in_clk, clr;
 
   	 //Lds
      wire[31:0] Ld;
@@ -65,38 +65,38 @@ wire[31:0] Q18;
 wire[31:0] Q30;
 	wire[31:0] Q31;
 
-      registers r00 (Q0, 32'b0000000000000000000000, 1'b1, in_clk);
-      registers r01 (Q1, in_PC, Ld[1], in_clk);
-      registers r02 (Q2, in_PC, Ld[2], in_clk);
-      registers r03 (Q3, in_PC, Ld[3], in_clk);
-      registers r04 (Q4, in_PC, Ld[4], in_clk);
-      registers r05 (Q5, in_PC, Ld[5], in_clk);
-      registers r06 (Q6, in_PC, Ld[6], in_clk);
-      registers r07 (Q7, in_PC, Ld[7], in_clk);
-      registers r08 (Q8, in_PC, Ld[8], in_clk);
-      registers r09 (Q9, in_PC, Ld[9], in_clk);
-      registers r10 (Q10, in_PC, Ld[10], in_clk);
-      registers r11 (Q11, in_PC, Ld[11], in_clk);
-      registers r12 (Q12, in_PC, Ld[12], in_clk);
-      registers r13 (Q13, in_PC, Ld[13], in_clk);
-      registers r14 (Q14, in_PC, Ld[14], in_clk);
-      registers r15 (Q15, in_PC, Ld[15], in_clk);
-      registers r16 (Q16, in_PC, Ld[16], in_clk);
-      registers r17 (Q17, in_PC, Ld[17], in_clk);
-      registers r18 (Q18, in_PC, Ld[18], in_clk);
-      registers r19 (Q19, in_PC, Ld[19], in_clk);
-      registers r20 (Q20, in_PC, Ld[20], in_clk);
-      registers r21 (Q21, in_PC, Ld[21], in_clk);
-      registers r22 (Q22, in_PC, Ld[22], in_clk);
-      registers r23 (Q23, in_PC, Ld[23], in_clk);
-      registers r24 (Q24, in_PC, Ld[24], in_clk);
-      registers r25 (Q25, in_PC, Ld[25], in_clk);
-      registers r26 (Q26, in_PC, Ld[26], in_clk);
-      registers r027 (Q27, in_PC, Ld[27], in_clk);
-      registers r28 (Q28, in_PC, Ld[28], in_clk);
-      registers r29 (Q29, in_PC, Ld[29], in_clk);
-      registers r30 (Q30, in_PC, Ld[30], in_clk);
-      registers r31 (Q31, in_PC, Ld[31], in_clk);
+      registers r00 (Q0, 32'b0000000000000000000000, 1'b1, in_clk, clr);
+      registers r01 (Q1, in_PC, Ld[1], in_clk, clr);
+      registers r02 (Q2, in_PC, Ld[2], in_clk, clr);
+      registers r03 (Q3, in_PC, Ld[3], in_clk, clr);
+      registers r04 (Q4, in_PC, Ld[4], in_clk, clr);
+      registers r05 (Q5, in_PC, Ld[5], in_clk, clr);
+      registers r06 (Q6, in_PC, Ld[6], in_clk, clr);
+      registers r07 (Q7, in_PC, Ld[7], in_clk, clr);
+      registers r08 (Q8, in_PC, Ld[8], in_clk, clr);
+      registers r09 (Q9, in_PC, Ld[9], in_clk, clr);
+      registers r10 (Q10, in_PC, Ld[10], in_clk, clr);
+      registers r11 (Q11, in_PC, Ld[11], in_clk, clr);
+      registers r12 (Q12, in_PC, Ld[12], in_clk, clr);
+      registers r13 (Q13, in_PC, Ld[13], in_clk, clr);
+      registers r14 (Q14, in_PC, Ld[14], in_clk, clr);
+      registers r15 (Q15, in_PC, Ld[15], in_clk, clr);
+      registers r16 (Q16, in_PC, Ld[16], in_clk, clr);
+      registers r17 (Q17, in_PC, Ld[17], in_clk, clr);
+      registers r18 (Q18, in_PC, Ld[18], in_clk, clr);
+      registers r19 (Q19, in_PC, Ld[19], in_clk, clr);
+      registers r20 (Q20, in_PC, Ld[20], in_clk, clr);
+      registers r21 (Q21, in_PC, Ld[21], in_clk, clr);
+      registers r22 (Q22, in_PC, Ld[22], in_clk, clr);
+      registers r23 (Q23, in_PC, Ld[23], in_clk, clr);
+      registers r24 (Q24, in_PC, Ld[24], in_clk, clr);
+      registers r25 (Q25, in_PC, Ld[25], in_clk, clr);
+      registers r26 (Q26, in_PC, Ld[26], in_clk, clr);
+      registers r27 (Q27, in_PC, Ld[27], in_clk, clr);
+      registers r28 (Q28, in_PC, Ld[28], in_clk, clr);
+      registers r29 (Q29, in_PC, Ld[29], in_clk, clr);
+      registers r30 (Q30, in_PC, Ld[30], in_clk, clr);
+      registers r31 (Q31, in_PC, Ld[31], in_clk, clr);
 
 	//Mux
 mux mux_A(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, in_SA, out_PA);
@@ -157,19 +157,16 @@ mux mux_B(Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, 
 
 	//Registers
 
-	module registers(out_Q, in_D, Ld, clk);
+	module registers(out_Q, in_D, Ld, clk, clr);
 			 output reg[31:0] out_Q;
 			 input [31:0] in_D;
 			 input Ld;
-			 input clk;
-
+			 input clk, clr;
 			 always @(posedge clk)
-			 begin
-				if (Ld)
-				begin
-				out_Q <= in_D;
-				end
-			 end
+			 	if(clr)
+					out_Q <= 32'd0;
+				else if (Ld)
+					out_Q <= in_D;
 	endmodule
 
 	//Mux
