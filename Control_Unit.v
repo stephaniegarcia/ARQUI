@@ -4013,7 +4013,7 @@ module microStore(input [7:0] Y, output reg [52:0] data_out );
           MDR_Ld = 1'b0;
           MuxMAR_Ld = 1'b0;
           RF_Ld = 1'b1;
-          MuxC_Ld =0;
+          MuxC_Ld =1'b0;
           PC_Ld = 1'b1;
           nPC_Ld = 1'b0;
           MuxMDR_Ld = 1'b0;
