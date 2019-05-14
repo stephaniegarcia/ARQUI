@@ -10,7 +10,7 @@ module datapath(input Clr, Clk);
   wire [5:0] opcode;
   wire[1:0] MuxA_Ld, MuxB_Ld, MuxReg_Ld;
 
-  wire[31:0] DataOut; 
+  wire[31:0] DataOut;
 
 	wire[31:0] PC_out;
 
@@ -37,7 +37,7 @@ module datapath(input Clr, Clk);
 	
 // Modules are Instantiated here. Missing ALU and Register File
 
-	Control_Unit CU(state, Y, st, state1, COND, IR_out, MOC, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, func, MuxA_Ld, MuxB_Ld, MuxReg_Ld, PA, PB, Clr, Clk);
+	Control_Unit CU(state, Y, st, state1, COND, IR_out, MOC, IR_Ld, MAR_Ld, MDR_Ld, MuxMAR_Ld, RF_Ld, MuxC_Ld, PC_Ld, nPC_Ld, MuxMDR_Ld, MOV, RW, Hi_Ld, Lo_Ld, opcode, func, MuxA_Ld, MuxB_Ld, MuxReg_Ld, Clr, Clk);
 
 	mux_4x1_32 MUXA(Mux_a_out, MuxA_Ld, PA, PC_out,  nPC_out, 32'b0);
 	
@@ -51,7 +51,7 @@ module datapath(input Clr, Clk);
   
   registernPC nPC(nPC_out, nPC_Ld, ALU_out, Clr, Clk);
 	
-	registerPC PC(PC_out, PC_Ld, nPC_out, Clr, Clk);
+	registerclr PC(PC_out, PC_Ld, nPC_out, Clr, Clk);
 	
 	registerIR IR(IR_out, IR_Ld, DataOut, Clr, Clk);
 	
@@ -136,26 +136,13 @@ module registerclr(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input
   always @ (posedge Clk, posedge Clr)         
 		if(Clr) Q = 32'h0000_0000;
 		else if(ld)
-			Q <= D;           
+			Q = D;           
 endmodule
-
-module registerPC(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input Clk);	
-  always @ (posedge Clk, posedge Clr)         
-		if(Clr) Q = 32'h0000_0000;
-		else if(ld) begin
-			Q <= D;
-			// $display("PC: %d", Q);
-		end
-	            
-endmodule
-
 module registernPC(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input Clk);	
   always @ (posedge Clk, posedge Clr)         
 		if(Clr) Q = 32'd4;
-		else if(ld) begin
-			Q <= D;   
-			// $display("nPC: %d", Q);
-		end   
+		else if(ld)
+			Q = D;           
 endmodule
 
 
@@ -163,7 +150,7 @@ module registerIR(output reg [31:0]Q, input ld, input [31:0]D, input Clr, input 
   always @ (posedge Clk, posedge Clr)         
 
 	if(ld)
-			Q <= D;           
+			Q = D;           
 endmodule
 
 

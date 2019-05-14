@@ -3,7 +3,7 @@ module ALU(output reg [31:0] Y, output reg N, Z, C, V, input [5:0] func, input s
 integer count1,count2,count3,i;
 reg [63:0] temp;
 always@(func,A,B)
-begin 
+begin
 	case(func)
 		6'b100000: begin {C,Y}=A+B; 
 		N = (Y[31]==1'b1);
@@ -79,8 +79,7 @@ begin
 		end 
 
 
-		6'b010110: Y <= A + 4 * B;                       // Operation: Branches and Jumps
-
+		6'b010110: Y <= A + 4 + 4 * B;                       // Operation: Branches and Jumps
 		     6'b111000: {C, Y} <= B << A;                         // Operation: SLL
             6'b111100: {C, Y} <= A << B;                         // Operation: SLLV
             6'b111110: begin 
